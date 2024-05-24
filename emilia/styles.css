@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'VGA';
+    src: url('Ac437_IBM_VGA_8x14.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: 'VGA', 'Courier New', Courier, monospace;
+    background-color: #0000AA; 
+    color: #cfcfcf; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 20px;
+    cursor: url('butterfly-cursor.png'), auto;
+}
+
+.container {
+    text-align: center;
+}
+
+video {
+    max-width: 100%; 
+    height: auto; 
+}
+
+.descricao {
+    font-size: 18px;
+    text-align: left;
+    max-width: 600px; 
+    margin: 5 auto;
+}
+
+.navegacao button {
+    background-color: #0000AA;
+    color: #808080;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'VGA', 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+.navegacao button:hover {
+    background-color: #d40202;
+    color: #ffffff;
+    font-family: 'VGA', 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+.video-container {
+    max-width: 80%; 
+    margin: 0 auto; 
+}
+
+.content {
+    text-align: center; /* Center the content */
+}
+
+.image-text-container {
+    display: flex; /* Use flexbox to display the image and text side by side */
+    justify-content: center; /* Center the image and text horizontally */
+    align-items: center; /* Center the image and text vertically */
+    margin: 20px; /* Add some margin around the container */
+}
+
+.image-container {
+    flex: 1; /* Set the image container to take up 1 unit of space */
+}
+
+.image-container img {
+    width: 100%; /* Set the image width to 100% of the container */
+    height: 500px; /* Set the image height to 500px */
+    object-fit: cover; /* Ensure the image is fully visible within the specified dimensions */
+}
+
+.text-container {
+    flex: 1; /* Set the text container to take up 1 unit of space */
+    padding-left: 20px; /* Add some space between the image and the text */
+}
+
+.ascii-art {
+    font-family: monospace;
+    white-space: pre;
+    font-size: 24px;
+}
+
+.descricao {
+    text-align: left; /* Left-align the paragraph text */
+}
+
+.butterfly-cursor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: flutter 2s infinite;
+}
+
+@keyframes flutter {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(2px, 2px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+a {
+    color: red;
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 768px) {
+    .image-container img {
+        height: 300px; /* Adjust the image height for smaller screens */
+    }
+    .descricao {
+        font-size: 14px; /* Adjust the paragraph font size for smaller screens */
+    }
+    .ascii-art {
+        font-size: 18px; /* Adjust the ASCII art font size for smaller screens */
+    }
+    .content {
+        flex-direction: column; /* Stack the image and text vertically on smaller screens */
+    }
+    .image-text-container {
+        flex-direction: column; /* Stack the image and text vertically on smaller screens */
+    }
+}
+
